@@ -1,0 +1,41 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
+    <sly data-sly-call="${templates.placeholder @ isEmpty = !customCarousel.slides}"></sly>
+</sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientlib.css @ categories='practice.customcarousel'}"/>
+<sly data-sly-call="${clientlib.js @ categories='practice.customcarousel'}"/>
+
+<sly data-sly-use.customCarousel="com.adobe.aem.tutorial.core.models.CustomCarouselModel">
+
+    <div class="custom-carousel">
+        <div class="custom-carousel__track">
+            <sly data-sly-list.slide="${customCarousel.slides}">
+                <div class="custom-carousel__slide"
+                     style="background-image: url('${slide.imagePath @ context='uri'}')">
+
+                    <div class="custom-carousel__overlay">
+                        <sly data-sly-test="${slide.title}">
+                            <h2 class="custom-carousel__title">
+                                ${slide.title}
+                            </h2>
+                        </sly>
+
+                        <sly data-sly-test="${slide.subtitle}">
+                            <p class="custom-carousel__subtitle">
+                                ${slide.subtitle}
+                            </p>
+                        </sly>
+
+                        <sly data-sly-test="${slide.buttonLabel}">
+                            <a class="custom-carousel__button"
+                               href="${slide.pagePath}.html?wcmmode=disabled">
+                                ${slide.buttonLabel}
+                            </a>
+                        </sly>
+                    </div>
+                </div>
+            </sly>
+        </div>
+    </div>
+</sly>
