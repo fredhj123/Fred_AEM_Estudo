@@ -1,0 +1,45 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='practice.site'}"/>
+<div data-sly-use.car="com.adobe.aem.tutorial.core.models.CarModel" 
+     class="car-card-container" 
+     data-sly-test.hasModel="${car.model}">
+
+    <div class="car-header">
+        <span class="brand">${car.brand}</span>
+        <h2 class="model-name">${car.model} (${car.year})</h2>
+        <span class="category-badge">${car.category}</span>
+    </div>
+
+    <p class="description">${car.description}</p>
+
+    <div class="price-section" data-sly-test="${car.price}">
+        <p><strong>Preço Base:</strong> ${car.price.valueMap.currency} ${car.price.valueMap.base}</p>
+    </div>
+
+    <div class="highlights-section" data-sly-test="${car.highlights}">
+        <h3>Destaques:</h3>
+        <ul data-sly-list.item="${car.highlights}">
+            <li>${item}</li>
+        </ul>
+    </div>
+
+    <div class="specs-grid" data-sly-test="${car.specifications}">
+        <h3>Especificações Técnicas:</h3>
+        <ul>
+            <li><strong>Motor:</strong> ${car.specifications.engine.type}</li>
+            <li><strong>Potência:</strong> ${car.specifications.engine.horsepower} HP</li>
+            <li><strong>Aceleração (0-100km/h):</strong> ${car.specifications.performance.acceleration0To100}s</li>
+        </ul>
+    </div>
+
+    <div class="safety-features" data-sly-test="${car.safetyFeatures}">
+        <h3>Segurança:</h3>
+        <ul data-sly-list.safety="${car.safetyFeatures}">
+            <li>${safety}</li>
+        </ul>
+    </div>
+</div>
+
+<div data-sly-test="${!hasModel && wcmmode.edit}" class="cq-placeholder">
+    Clique para configurar os dados do veículo.
+</div>
