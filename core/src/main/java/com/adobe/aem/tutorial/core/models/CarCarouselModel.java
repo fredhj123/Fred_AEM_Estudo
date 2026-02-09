@@ -7,8 +7,10 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.sling.models.annotations.injectorspecific.*;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 
-@Model(adaptables = Resource.class)
+@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CarCarouselModel {
 
     // Injeta o multifield 'slides' definido no XML do diálogo
