@@ -1,0 +1,134 @@
+/* =========================================
+   A4X Custom Carousel - Hero Style
+   ========================================= */
+
+/* CONTAINER PRINCIPAL */
+.custom-carousel {
+    width: 100%;
+    max-width: 1440px; /* Limita a largura em telas gigantes */
+    margin: 0 auto;    /* Centraliza na tela */
+    overflow: hidden;  /* Esconde os slides que estão "na fila" */
+    position: relative;
+    background-color: #0f1111; /* Fundo de segurança caso a imagem não carregue */
+}
+
+/* TRILHO DE ANIMAÇÃO */
+.custom-carousel__track {
+    display: flex; /* Coloca os slides um ao lado do outro */
+    width: 100%;
+    /* A transição suave controlada pelo JS via transform */
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
+    will-change: transform; /* Otimização de performance */
+}
+
+/* O SLIDE INDIVIDUAL */
+.custom-carousel__slide {
+    min-width: 100%; /* OBRIGATÓRIO: Faz o slide ocupar 100% da largura do pai */
+    flex: 0 0 100%;  /* Garante que o flexbox não encolha o slide */
+    height: 600px;   /* Altura do banner (Aumentei um pouco para dar imponência) */
+
+    /* Configuração da Imagem de Fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    position: relative;
+}
+
+/* CAMADA ESCURA (OVERLAY) PARA LEITURA DE TEXTO */
+.custom-carousel__overlay {
+    position: absolute;
+    inset: 0; /* Ocupa todo o espaço do slide */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o texto verticalmente */
+    align-items: flex-start; /* Alinha texto à esquerda */
+    
+    padding: 0 80px; /* Espaçamento lateral */
+    
+    /* Gradiente para garantir que o texto branco apareça sobre qualquer foto */
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+/* TÍTULO DO CARRO */
+.custom-carousel__title {
+    color: #ffffff;
+    font-size: 3.5rem; /* Aumentado para impacto */
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 16px 0;
+    max-width: 700px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* SUBTÍTULO / DESCRIÇÃO */
+.custom-carousel__subtitle {
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 32px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* BOTÃO DE AÇÃO */
+.custom-carousel__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 16px 40px;
+    background-color: #ffffff;
+    color: #000000;
+    
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.custom-carousel__button:hover {
+    background-color: #00d4ff; /* Aquele Cyan da marca A4X que você tinha antes */
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 212, 255, 0.4);
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 768px) {
+    .custom-carousel__slide {
+        height: 500px; /* Altura menor no celular */
+        background-position: center top;
+    }
+    
+    .custom-carousel__overlay {
+        padding: 24px;
+        align-items: center; /* Centraliza tudo no mobile */
+        text-align: center;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9) 0%,
+            rgba(0, 0, 0, 0.2) 100%
+        );
+    }
+    
+    .custom-carousel__title {
+        font-size: 2rem;
+    }
+    
+    .custom-carousel__subtitle {
+        font-size: 1rem;
+    }
+}

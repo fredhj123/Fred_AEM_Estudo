@@ -36,6 +36,12 @@ public class CarModel {
     @ValueMapValue
     private List<String> safetyFeatures;
 
+    @ValueMapValue
+    private String imagePath;
+    
+    @ValueMapValue
+    private String badge;
+
     @ChildResource
     private Resource price;
 
@@ -82,5 +88,13 @@ public class CarModel {
 
     public Resource getSpecifications() {
         return specifications;
+    }
+
+    public String getImagePath() {
+        return imagePath; 
+    }
+
+    public String getBadge() {
+        return badge;
     }
 }
