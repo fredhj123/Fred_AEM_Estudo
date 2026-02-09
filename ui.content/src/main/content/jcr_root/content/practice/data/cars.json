@@ -1,0 +1,317 @@
+{
+    "models": [
+        {
+            "id": "a4x-velocity-2026",
+            "brand": "A4X Motors",
+            "model": "Velocity",
+            "imagePath": "/content/dam/practice/cars/velocity.jpg",
+            "badge": "NEW 2026",
+            "category": "Sedan",
+            "description": "Designed for performance. Built for comfort.",
+            "price": {
+                "currency": "USD",
+                "base": 42900,
+                "configured": 48600
+            },
+            "highlights": [
+                "0–100 km/h in 4.8 seconds",
+                "280 HP Turbocharged Engine",
+                "Adaptive Cruise Control",
+                "Premium Leather Interior",
+                "5-Star Safety Rating"
+            ],
+            "specifications": {
+                "engine": {
+                    "type": "2.0L Turbocharged Inline-4",
+                    "horsepower": 280,
+                    "torqueNm": 400,
+                    "fuelType": "Petrol"
+                },
+                "performance": {
+                    "topSpeedKmh": 250,
+                    "acceleration0To100": 4.8,
+                    "driveType": "AWD"
+                },
+                "transmission": {
+                    "type": "Automatic",
+                    "gears": 8
+                }
+            },
+            "interiorFeatures": [
+                "12.3” Digital Cockpit Display",
+                "Wireless Apple CarPlay & Android Auto",
+                "Dual-Zone Automatic Climate Control",
+                "Ambient LED Lighting (30 colors)",
+                "Heated and Ventilated Front Seats"
+            ],
+            "safetyFeatures": [
+                "Lane Keep Assist",
+                "Blind Spot Monitoring",
+                "Automatic Emergency Braking",
+                "Rear Cross Traffic Alert",
+                "Adaptive Headlights",
+                "8 Airbags"
+            ]
+        },
+        {
+            "id": "a4x-pulse-2025",
+            "brand": "A4X Motors",
+            "model": "Pulse",
+            "imagePath": "/content/dam/practice/cars/pulse.jpg",
+            "badge": "2025 MODEL",
+            "category": "Hatchback",
+            "description": "Compact design with smart technology for the city.",
+            "price": {
+                "currency": "USD",
+                "base": 24900,
+                "configured": 28700
+            },
+            "highlights": [
+                "0–100 km/h in 7.2 seconds",
+                "180 HP Turbo Engine",
+                "Smart City Assist",
+                "Digital Cockpit",
+                "Excellent Fuel Efficiency"
+            ],
+            "specifications": {
+                "engine": {
+                    "type": "1.6L Turbocharged Inline-4",
+                    "horsepower": 180,
+                    "torqueNm": 280,
+                    "fuelType": "Petrol"
+                },
+                "performance": {
+                    "topSpeedKmh": 215,
+                    "acceleration0To100": 7.2,
+                    "driveType": "FWD"
+                },
+                "transmission": {
+                    "type": "Automatic",
+                    "gears": 7
+                }
+            },
+            "interiorFeatures": [
+                "10” Digital Instrument Cluster",
+                "Wireless Apple CarPlay & Android Auto",
+                "Automatic Climate Control",
+                "Fabric Sport Seats",
+                "Keyless Start"
+            ],
+            "safetyFeatures": [
+                "Lane Departure Warning",
+                "Automatic Emergency Braking",
+                "Rear Parking Sensors",
+                "Driver Attention Alert",
+                "6 Airbags"
+            ]
+        },
+        {
+            "id": "a4x-terra-2026",
+            "brand": "A4X Motors",
+            "model": "Terra",
+            "imagePath": "/content/dam/practice/cars/terra.jpg",
+            "badge": "2026 MODEL",
+            "category": "SUV",
+            "description": "Built to explore. Ready for every terrain.",
+            "price": {
+                "currency": "USD",
+                "base": 38900,
+                "configured": 44500
+            },
+            "highlights": [
+                "All-Wheel Drive Capability",
+                "245 HP Turbo Engine",
+                "Off-Road Drive Modes",
+                "Spacious Interior",
+                "Advanced Safety Systems"
+            ],
+            "specifications": {
+                "engine": {
+                    "type": "2.2L Turbocharged Inline-4",
+                    "horsepower": 245,
+                    "torqueNm": 380,
+                    "fuelType": "Petrol"
+                },
+                "performance": {
+                    "topSpeedKmh": 225,
+                    "acceleration0To100": 6.9,
+                    "driveType": "AWD"
+                },
+                "transmission": {
+                    "type": "Automatic",
+                    "gears": 8
+                }
+            },
+            "interiorFeatures": [
+                "12” Touchscreen Infotainment",
+                "Leather Seats",
+                "Panoramic Sunroof",
+                "Tri-Zone Climate Control",
+                "Wireless Charging Pad"
+            ],
+            "safetyFeatures": [
+                "Adaptive Cruise Control",
+                "Hill Descent Control",
+                "360° Camera",
+                "Blind Spot Monitoring",
+                "8 Airbags"
+            ]
+        },
+        {
+            "id": "a4x-apex-2026",
+            "brand": "A4X Motors",
+            "model": "Apex",
+            "imagePath": "/content/dam/practice/cars/apex.jpg",
+            "badge": "2026 MODEL",
+            "category": "Coupe",
+            "description": "Pure performance with aggressive design.",
+            "price": {
+                "currency": "USD",
+                "base": 55900,
+                "configured": 62800
+            },
+            "highlights": [
+                "0–100 km/h in 3.9 seconds",
+                "420 HP Twin-Turbo Engine",
+                "Sport-Tuned Suspension",
+                "Carbon Fiber Details",
+                "Launch Control"
+            ],
+            "specifications": {
+                "engine": {
+                    "type": "3.0L Twin-Turbo V6",
+                    "horsepower": 420,
+                    "torqueNm": 550,
+                    "fuelType": "Petrol"
+                },
+                "performance": {
+                    "topSpeedKmh": 290,
+                    "acceleration0To100": 3.9,
+                    "driveType": "RWD"
+                },
+                "transmission": {
+                    "type": "Automatic",
+                    "gears": 8
+                }
+            },
+            "interiorFeatures": [
+                "Sport Bucket Seats",
+                "Alcantara Steering Wheel",
+                "Digital Performance Display",
+                "Premium Sound System",
+                "Drive Mode Selector"
+            ],
+            "safetyFeatures": [
+                "Performance Brake Assist",
+                "Stability Control",
+                "Rear Camera",
+                "Collision Warning",
+                "6 Airbags"
+            ]
+        },
+        {
+            "id": "a4x-nova-2025",
+            "brand": "A4X Motors",
+            "model": "Nova",
+            "imagePath": "/content/dam/practice/cars/nova.jpg",
+            "badge": "2025 MODEL",
+            "category": "Sedan",
+            "description": "Comfort, space, and efficiency for everyday driving.",
+            "price": {
+                "currency": "USD",
+                "base": 31900,
+                "configured": 36200
+            },
+            "highlights": [
+                "Spacious Rear Seating",
+                "190 HP Efficient Engine",
+                "Smooth Ride Comfort",
+                "Low Fuel Consumption",
+                "Advanced Driver Assistance"
+            ],
+            "specifications": {
+                "engine": {
+                    "type": "1.8L Inline-4",
+                    "horsepower": 190,
+                    "torqueNm": 260,
+                    "fuelType": "Petrol"
+                },
+                "performance": {
+                    "topSpeedKmh": 210,
+                    "acceleration0To100": 7.8,
+                    "driveType": "FWD"
+                },
+                "transmission": {
+                    "type": "Automatic",
+                    "gears": 6
+                }
+            },
+            "interiorFeatures": [
+                "11” Infotainment Display",
+                "Comfort Fabric Seats",
+                "Rear Air Vents",
+                "Wireless Phone Integration",
+                "Large Trunk Capacity"
+            ],
+            "safetyFeatures": [
+                "Lane Keep Assist",
+                "Traffic Sign Recognition",
+                "Rear Camera",
+                "Emergency Brake Assist",
+                "6 Airbags"
+            ]
+        },
+        {
+            "id": "a4x-eon-2026",
+            "brand": "A4X Motors",
+            "model": "Eon",
+            "imagePath": "/content/dam/practice/cars/eon.jpg",
+            "badge": "2026 MODEL",
+            "category": "Electric",
+            "description": "Silent power with zero emissions.",
+            "price": {
+                "currency": "USD",
+                "base": 46900,
+                "configured": 52900
+            },
+            "highlights": [
+                "Up to 520 km Range",
+                "Dual Motor AWD",
+                "Fast Charging Capability",
+                "Instant Torque Delivery",
+                "Minimalist Interior Design"
+            ],
+            "specifications": {
+                "engine": {
+                    "type": "Dual Electric Motors",
+                    "horsepower": 360,
+                    "torqueNm": 640,
+                    "fuelType": "Electric"
+                },
+                "performance": {
+                    "topSpeedKmh": 240,
+                    "acceleration0To100": 4.5,
+                    "driveType": "AWD"
+                },
+                "transmission": {
+                    "type": "Single-Speed",
+                    "gears": 1
+                }
+            },
+            "interiorFeatures": [
+                "15” Central Touchscreen",
+                "Vegan Leather Seats",
+                "Panoramic Glass Roof",
+                "Over-the-Air Updates",
+                "Wireless Charging"
+            ],
+            "safetyFeatures": [
+                "Autonomous Emergency Braking",
+                "Lane Centering Assist",
+                "Adaptive Cruise Control",
+                "360° Surround View",
+                "8 Airbags"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+/* Variaveis para o tema automotivo */
+$auto-chrome-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+$auto-dark-carbon: #1a1a1a;
+$auto-red-line: #ff3b30;
+$auto-glow: 0 0 10px rgba(255, 59, 48, 0.7);
+
+.cmp-carousel--automotive {
+  
+  /* 1. Moldura Principal: Visual "fibra de carbono" ou escuro */
+  .cmp-carousel__content {
+    border-bottom: 4px solid $auto-dark-carbon;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  }
+
+  /* 2. Botões de Navegação (Setas Metálicas) */
+  .cmp-carousel__action {
+    background: $auto-chrome-gradient;
+    border: 2px solid #555;
+    border-radius: 50%; /* Botão redondo */
+    width: 60px;
+    height: 60px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    
+    /* Ícone da seta (ajustando a cor para contraste no metal) */
+    .cmp-carousel__action-icon {
+      filter: invert(1) brightness(0); /* Torna o ícone preto */
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Brilho de farol */
+      border-color: $auto-red-line;
+    }
+  }
+
+  /* Posicionamento das setas para fora da imagem (opcional) */
+  .cmp-carousel__action--previous {
+    left: 20px;
+  }
+  
+  .cmp-carousel__action--next {
+    right: 20px;
+  }
+
+  /* 3. Indicadores (Estilo Velocímetro/Painel) */
+  .cmp-carousel__indicators {
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.6); /* Fundo do painel */
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #555;
+    backdrop-filter: blur(5px);
+    
+    li {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #999;
+      background: #222;
+      margin: 0 8px;
+      position: relative;
+      opacity: 1; /* Remove opacidade padrão */
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      /* O "Ponteiro" do velocímetro */
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        width: 2px;
+        height: 14px;
+        background: #fff;
+        transform-origin: bottom center;
+        transform: translateX(-50%) rotate(-45deg); /* Posição inicial (0 km/h) */
+        transition: transform 0.4s ease-out;
+      }
+
+      /* Pequenos ticks de marcação no fundo */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        border-radius: 50%;
+        border-top: 2px solid rgba(255,255,255,0.3); /* Arco do velocímetro */
+      }
+    }
+
+    /* Estado Ativo: Ponteiro sobe e brilha vermelho (Redline) */
+    .cmp-carousel__indicator--active {
+      border-color: $auto-red-line;
+      box-shadow: $auto-glow;
+      background: radial-gradient(circle, #330000 0%, #000 100%);
+
+      &::after {
+        background: $auto-red-line;
+        transform: translateX(-50%) rotate(45deg); /* Posição ativa (velocidade máxima) */
+        box-shadow: 0 0 5px red;
+      }
+    }
+  }
+}
