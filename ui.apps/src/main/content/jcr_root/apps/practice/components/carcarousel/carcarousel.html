@@ -1,4 +1,4 @@
-<sly data-sly-use.customCarousel="com.adobe.aem.tutorial.core.models.CustomCarouselModel"/>
+<sly data-sly-use.customCarousel="com.adobe.aem.tutorial.core.models.CarCarouselModel"/>
 
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html">
     <sly data-sly-call="${templates.placeholder @ isEmpty = customCarousel.empty}"></sly>
@@ -8,11 +8,10 @@
 <sly data-sly-call="${clientlib.css @ categories='practice.customcarousel'}"/>
 <sly data-sly-call="${clientlib.js @ categories='practice.customcarousel'}"/>
 
-<sly data-sly-test="${!customCarousel.empty}">
     <div class="custom-carousel">
         <div class="custom-carousel__track">
             
-            <sly data-sly-list.slide="${customCarousel.slides}">
+            <sly data-sly-list.slide="${customCarousel.items}">
                 <div class="custom-carousel__slide" 
                      style="background-image: url('${slide.imagePath @ context='uri'}')">
 
@@ -39,4 +38,3 @@
 
         </div>
     </div>
-</sly>
